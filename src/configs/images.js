@@ -1,0 +1,23 @@
+
+export const INSTANT_DELIVERY_ICON = require('../../assets/images/instant_delivery_icon.png');
+export const SCHEDULE_DELIVERY_ICON = require('../../assets/images/schedule_delivery_icon.png');
+export const MILK_SPLASH_ICON = require('../../assets/images/milk_splash_icon.png');
+export const SLIDER_IMAGE = require('../../assets/images/slider_image.png');
+export const ADD_TO_CART = require('../../assets/images/add_to_cart.png');
+export const ADD_TO_CART_LIGHT = require('../../assets/images/add_to_cart_light.png');
+export const PLUS_ICON = require('../../assets/images/plus_icon.png');
+export const MINUS_ICON = require('../../assets/images/minus.png');
+export const REMOVE_FROM_CART = require('../../assets/images/remove_from_cart.png');
+export const BACK_ICON = require('../../assets/images/back_icon.png');
+export const DROPDOWN_BLUE = require('../../assets/images/dropdown_blue.png');
+export const CART_BLUE = require('../../assets/images/cart_blue.png');
+export const CART_EMPTY = require('../../assets/images/cart_empty.png');
+export const USER_ICON = require('../../assets/images/user_icon.png');
+export const CARET_RIGHT = require('../../assets/images/caret_right.png');
+export const ARROW_RIGHT = require('../../assets/images/arrow_right.png');
+export const CHECK_SELECTED = require('../../assets/images/check_selected.png');
+export const CARET_DOWN = require('../../assets/images/caret_down.png');
+export const STEP_PASSED = require('../../assets/images/step_passed.png');
+export const STEP_CURRENT = require('../../assets/images/step_current.png');
+export const STEP_NEXT = require('../../assets/images/step_next.png');
+export const STEP_FINAL = require('../../assets/images/step_final.png');
