@@ -4,14 +4,14 @@ import { Divider, RowView, Spacer, Text } from '../styles'
 import fonts from '../../configs/fonts';
 import Button from '../Button';
 import colors from '../../configs/colors';
-import { Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableNativeFeedback, TouchableOpacity } from 'react-native';
 import { CHECK_SELECTED } from '../../configs/images';
 
 const AddressItem = ({ address, selectedId='', onPress = null, editPage=false, editPress=null, deletePress=null  }) => {
     const { id, name, title, apartment, addressLine1, addressLine2, floor, flatNumber, area, phone } = address;
     const isSelected = selectedId === id;
     return (
-        <TouchableOpacity >
+        <TouchableNativeFeedback onPress={onPress} disabled={editPage}>
             <AddressItemContainer>
                 <RowView>
                     <Text size={18} fontFamily={fonts.bold} color={colors.mainColor}>{name}</Text>
@@ -24,14 +24,12 @@ const AddressItem = ({ address, selectedId='', onPress = null, editPage=false, e
                 <Spacer space={2} /></> : null}
                 <Text>{addressLine1}, {addressLine2}</Text>
                 <Spacer space={2} />
-               
                 {
                     area ? <>
                      <Text>{area}</Text>
                     <Spacer space={2} />
                     </> : null
                 }
-               
                 <Text>+91-{phone}</Text>
                {
                 editPage ? <>
@@ -46,7 +44,7 @@ const AddressItem = ({ address, selectedId='', onPress = null, editPage=false, e
                 </> : null
                }
             </AddressItemContainer>
-        </TouchableOpacity>
+        </TouchableNativeFeedback>
     )
 }
 

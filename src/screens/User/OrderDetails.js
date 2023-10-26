@@ -84,7 +84,7 @@ const OrderDetails = ({ route }) => {
             </RowView>
             <Spacer space={20} />
             <ScrollView showsVerticalScrollIndicator={false}>
-            <OrderInfo order={order} onDeletePress={onDeletePress} />
+                <OrderInfo order={order} onDeletePress={onDeletePress} />
             </ScrollView>
         </MainWrapper>
     )

@@ -5,7 +5,7 @@ import MainWrapper from '../components/MainWrapper';
 import AddressItem from '../components/AddressComponents'
 import FloatingButton from '../components/FloatingButton'
 import AddressForm from '../components/AddressForm'
-import { ScrollView, View } from 'react-native';
+import { FlatList, ScrollView, View } from 'react-native';
 import { showSnackBarOne, snackBarType } from '../components/showSnackBarOne';
 import BottomFloatingButton from '../components/BottomFloatingButton';
 import EmptyPage from '../components/EmptyPage';
@@ -63,16 +63,17 @@ const CartAddress = ({ navigation, route }) => {
     return (
         <View style={{ flex: 1 }}>
             <MainWrapper loading={loading} title="Select Address" >
-                {
-                    addresses && addresses.length > 0 ?
-                        <ScrollView>
-                            {
-                                addresses.map(item => <AddressItem key={item.id} selectedId={selectedAddress.id} address={item} onPress={() => onAddressPress(item)} />)
-                            }
-                        </ScrollView>
-                        :
-                    <EmptyPage title={strings.empty_address_title} subTitle={strings.empty_address_sub_title} />
-                }
+                <FlatList
+                    data={addresses}
+                    renderItem={({item}) => <AddressItem key={item.id} selectedId={selectedAddress.id} address={item} onPress={() => onAddressPress(item)} />}
+                    keyExtractor={(item) => item.id}
+                    refreshing={false}
+                    onRefresh={fetchAddresses}
+                    showsVerticalScrollIndicator={false}
+                    ListEmptyComponent={<EmptyPage title={strings.empty_address_title} subTitle={strings.empty_address_sub_title} />}
+                    key={1} 
+                />
+               
                 <FloatingButton image={PLUS_ICON} title="Add Address" onPress={() => setShowAddressFrom(!showAddressFrom)} />
                 <BottomFloatingButton 
                     buttonText="Checkout"

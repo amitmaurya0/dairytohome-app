@@ -14,6 +14,7 @@ import deliveryTypes from '../configs/deliveryTypes'
 import { IMG_URL } from '../configs'
 import { FlatList, View } from 'react-native'
 import fonts from '../configs/fonts'
+import { CommonActions } from '@react-navigation/native'
 
 const Home = ({ navigation }) => {
     const { deliveryType, user } = useSelector((state) => ({
@@ -49,6 +50,7 @@ const Home = ({ navigation }) => {
     }
     
     useEffect(() => {
+        // navigation.pop()
         fetchHomeProducts();
     }, [])
 

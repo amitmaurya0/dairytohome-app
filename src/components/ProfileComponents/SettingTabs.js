@@ -22,9 +22,9 @@ const SettingTabs = props => {
             <SettingTabItem title="Orders" onPress={() => onPress('Orders')} />
             <SettingTabItem title="Manage Addresses" onPress={() => onPress('Addresses')} />
             <Spacer space={25} />
-            <Text size={22} fontFamily={fonts.bold}>Setting</Text>
+           {/*  <Text size={22} fontFamily={fonts.bold}>Setting</Text>
             <SettingTabItem title="Account" onPress={() => onPress('Orders')} />
-            <Spacer space={25} />
+            <Spacer space={25} /> */}
             <Text size={22} fontFamily={fonts.bold}>General</Text>
             <SettingTabItem title="Terms & Conditions" onPress={() => onPress('Orders')} />
             <SettingTabItem color={'red'} title="Logout" onPress={onLogoutPress} />

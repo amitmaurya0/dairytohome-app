@@ -45,11 +45,21 @@ export const placeOrder = async data => {
   return http
     .post(ALL_ORDERS, data)
     .then(res => {
-       console.log('===>',res)
       return checkAuth(res.data)
     })
     .catch(err => {
-       console.log('ERROR===>',err)
+      return checkError(err)
+    })
+}
+export const sendConfirmPayment = async data => {
+  
+  // console.log(options)
+  return http
+    .post(ALL_ORDERS+'/payment', data)
+    .then(res => {
+      return checkAuth(res.data)
+    })
+    .catch(err => {
       return checkError(err)
     })
 }

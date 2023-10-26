@@ -6,7 +6,7 @@ import colors from '../../configs/colors';
 import { TouchableNativeFeedback } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 
-const AccountTop = ({ name, phone }) => {
+const EditAccountRow = ({ title, value, onPress }) => {
     const navigation = useNavigation();
     function getFirstLetters(str) {
         var words = str.split(' ');
@@ -18,21 +18,18 @@ const AccountTop = ({ name, phone }) => {
     
   return (
     <MainNameContainer>
-        <ImageContainer>
-            <Text size={20} color={colors.white} fontFamily={fonts.bold}>{getFirstLetters(name)}</Text>
-        </ImageContainer>
         <NameContainer>
             <RowView sb={true} style={{ alignItems: 'flex-end' }}>
-                <Text size={20} fontFamily={fonts.bold}>{name}</Text>
+                <Text size={16} fontFamily={fonts.bold}>{title}</Text>
                 <TouchableNativeFeedback onPress={() => navigation.navigate('EditAccount')}>
-                    <Text size={16} color={colors.mainColor} fontFamily={fonts.bold}>EDIT</Text>
+                    <Text size={14} color={colors.mainColor} fontFamily={fonts.bold}>EDIT</Text>
                 </TouchableNativeFeedback>
             </RowView>
             <Spacer space={5} />
-            <Text size={14} fontFamily={fonts.medium}>+91-{phone}</Text>
+            <Text size={14} >{value}</Text>
         </NameContainer>
     </MainNameContainer>
   )
 }
 
-export default AccountTop
+export default EditAccountRow

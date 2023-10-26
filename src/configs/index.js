@@ -1,6 +1,10 @@
 // export const IMG_URL = '';
 export const IMG_URL = 'http://192.168.1.9:8000/';
 
+export const RazorpayData = {
+    key: 'rzp_test_xjoTT1ypZMLwGos'
+}
+
 export const CART_TYPES = {
     ADD: 'ADD',
     REMOVE: 'REMOVE'

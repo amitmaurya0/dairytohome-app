@@ -21,3 +21,4 @@ export const STEP_PASSED = require('../../assets/images/step_passed.png');
 export const STEP_CURRENT = require('../../assets/images/step_current.png');
 export const STEP_NEXT = require('../../assets/images/step_next.png');
 export const STEP_FINAL = require('../../assets/images/step_final.png');
+export const ORDER_SUCCESS = require('../../assets/images/order_success_image.png');

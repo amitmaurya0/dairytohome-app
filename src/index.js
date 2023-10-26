@@ -13,6 +13,7 @@ import CartAddress from './screens/CartAddress';
 import Checkout from './screens/Checkout';
 import OrderSuccess from './screens/OrderSuccess'
 import Profile from './screens/User/Profile'
+import EditAccount from './screens/User/EditAccount'
 import Addresses from './screens/User/Addresses'
 import Orders from './screens/User/Orders'
 import OrderDetails from './screens/User/OrderDetails'
@@ -65,7 +66,7 @@ const Stack = createNativeStackNavigator();
     }
 
     return (
-        <Stack.Navigator initialRouteName="Login"  
+        <Stack.Navigator initialRouteName="Home"  
           screenOptions={{ headerShown: false }}>
           {userDetail.isLoggedIn == false ? (
             <>
@@ -74,17 +75,18 @@ const Stack = createNativeStackNavigator();
               </>
           ) : (
             <>
-              <Stack.Screen name="DeliveryType" component={DeliveryType} />
               <Stack.Screen name="Home" component={Home} />
               <Stack.Screen name="ProductDetails" component={ProductDetails} />
               <Stack.Screen name="Cart" component={Cart} />
               <Stack.Screen name="CartAddress" component={CartAddress} />
               <Stack.Screen name="Checkout" component={Checkout} />
               <Stack.Screen name="Profile" component={Profile} />
+              <Stack.Screen name="EditAccount" component={EditAccount} />
               <Stack.Screen name="Addresses" component={Addresses} />
               <Stack.Screen name="Orders" component={Orders} />
               <Stack.Screen name="OrderDetails" component={OrderDetails} />
               <Stack.Screen name="OrderSuccess" component={OrderSuccess} />
+              <Stack.Screen name="DeliveryType" component={DeliveryType} />
             </>
           )}
         </Stack.Navigator>

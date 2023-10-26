@@ -4,11 +4,16 @@ import colors from "../../configs/colors";
 
 export const MainNameContainer = styled.View`
     flex-direction: row;
+    border-bottom-width: 1px;
+    border-style: dashed;
+    padding-bottom: 10;
+    border-bottom-color: ${colors.greyColor};
+
 `
 
 export const ImageContainer = styled.View`
-    height: 50px;
-    width: 50px;
+    height: 52px;
+    width: 52px;
     border-radius: 25px;
     background-color: ${colors.textBlack};
     margin-right: 10px;
@@ -17,7 +22,7 @@ export const ImageContainer = styled.View`
 `;
 
 export const NameContainer = styled.View`
-
+    flex: 1;
 `;
 
 export const SettingItemContainer = styled.View`
